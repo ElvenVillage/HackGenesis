@@ -4,25 +4,32 @@ if (window.screen.availWidth <= 425) {
     slidesMobile = 1
     mobileHeight = window.screen.availHeight
 }
+
 Vue.component('first-slider', {
     template: `
     <div class="swiper-wrapper" >
         <swiper ref="firstSwiper"
             :options="firstSwiperOptions"
             class="swiper">
-                <swiper-slide class="swiper-slide" ${(mobileHeight != 0) ? 'style="height:' + mobileHeight + 'px"' : ''}>
-                <div v-bind:class="{'expanded-two-columns': expandedFirst}">
+                <swiper-slide 
+                     class="swiper-slide" ${(mobileHeight != 0) ? 'style="height:' + mobileHeight + 'px"' : ''}
+                     v-for="(product, idx) in investProducts[0]" :key="idx">
+                <div v-bind:class="{'expanded-two-columns': expanded[idx]}">
                   <div>
-                    <first-slide @click.native="expandFirst" :class="{'left-column-before': !expandedFirst}"></first-slide>
+                    <first-slide @click.native="expand(idx)" 
+                                 :class="{'left-column-before': !expanded[idx]}"
+                                 :imgsrc="product.imgsrc"
+                                 :title="product.title"
+                                 :key="idx"></first-slide>
                   </div>
                  <div>
                     <article name="slide-fade">
-                    <div v-show="expandedFirst">
+                    <div v-show="expanded[idx]">
                       <ul class="dot">
-                        <li class="dot">Ежедневная прибыль 3%</li>
-                        <li class="dot">Вывод прибыли: в любое время</li>
-                        <li class="dot">Тело депозита: возвращается</li>
-                        <li class="dot">Минимальная сумма: нет</li>
+                        <li class="dot" v-for="(dotInput, dotIndex) in product.description"
+                         :key="dotIndex">
+                            {{ dotInput }}
+                        </li>
                         <div style="margin-top: 20px">
                          <button class="button">Выбрать</button>
                      </div>
@@ -33,50 +40,6 @@ Vue.component('first-slider', {
                    </div>
                </div>
             </swiper-slide>
-            <swiper-slide class="swiper-slide" ${(mobileHeight != 0) ? 'style="height:' + mobileHeight + 'px"' : ''}>
-            <div v-bind:class="{'expanded-two-columns': expandedSecond}">
-            <div>
-            <second-slide @click.native="expandSecond" :class="{'left-column-before': !expandedSecond}"></second-slide>
-               
-            </div><div>
-               <article name="slide-fade">
-               <div v-show="expandedSecond">
-                  <ul class="dot" style="background-color: white; color: black">
-                        <li class="dot">Ежедневная прибыль 0%</li>
-                        <li class="dot">Вывод прибыли: раз в полгода</li>
-                        <li class="dot">Тело депозита: что</li>
-                        <li class="dot">Минимальная сумма: 100$</li>
-                        <div style="margin-top: 20px">
-                         <button class="button">Выбрать</button>
-                     </div>
-                      </ul>
-                    
-               </div>
-               </article></div>
-               </div>
-            </swiper-slide>
-            <swiper-slide class="swiper-slide" ${(mobileHeight != 0) ? 'style="height:' + mobileHeight + 'px"' : ''}> 
-            <div v-bind:class="{'expanded-two-columns': expandedThird}">
-            <div>
-            <third-slide :class="{'left-column-before': !expandedThird}" @click.native="expandThird"></third-slide>
-            
-            </div><div>
-              <article name="slide-fade">
-               <div v-show="expandedThird">
-               <ul class="dot"style="background-color: white; color: black">
-                        <li class="dot">Ежедневная прибыль 5%</li>
-                        <li class="dot">Вывод прибыли: невозможно</li>
-                        <li class="dot">Тело депозита: не возвращается</li>
-                        <li class="dot">Минимальная сумма: 6$</li>
-                        <div style="margin-top: 20px">
-                         <button class="button">Выбрать</button>
-                     </div>
-                      </ul>
-                     
-               </div>
-               </article></div>
-               </div>
-            </swiper-slide>
             <div class="swiper-pagination" slot="pagination"></div>
             <div class="swiper-button-prev" slot="button-prev"></div>
             <div class="swiper-button-next" slot="button-next"></div>
@@ -84,31 +47,68 @@ Vue.component('first-slider', {
     </div>
     `,
     methods: {
-        expandFirst() {
-            this.expandedFirst = !this.expandedFirst
-        },
-        expandSecond() {
-            this.expandedSecond = !this.expandedSecond
-        },
-        expandThird() {
-            this.expandedThird = !this.expandedThird
+        expand(idx) {
+            const tmp = [false, false, false]
+            if (!this.expanded[idx])
+                tmp[idx] = true
+            this.expanded = tmp
         }
     },
     data: function () {
         return {
-            expandedFirst: false,
-            expandedSecond: false,
-            expandedThird: false,
+            investProducts: [[
+                {
+                    imgsrc: 'https://sun9-40.userapi.com/LwhJLziwp3WWEeNi29VsLyONM81qWgKZM0U28w/ce_7QdTEalI.jpg',
+                    title: 'based',
+                    description: ['based', 'based', 'based']
+                }, {
+                    imgsrc: 'https://sun9-40.userapi.com/LwhJLziwp3WWEeNi29VsLyONM81qWgKZM0U28w/ce_7QdTEalI.jpg',
+                    title: 'based2',
+                    description: []
+                }, {
+                    imgsrc: 'https://sun9-40.userapi.com/LwhJLziwp3WWEeNi29VsLyONM81qWgKZM0U28w/ce_7QdTEalI.jpg',
+                    title: 'base2',
+                    description: []
+                }],[
+                {
+                    imgsrc: '',
+                    title: '',
+                    description: []
+                }, {
+                    imgsrc: '',
+                    title: '',
+                    description: []
+                }, {
+                    imgsrc: '',
+                    title: '',
+                    description: []
+                }],[
+                {
+                    imgsrc: '',
+                    title: '',
+                    description: []
+                }, {
+                    imgsrc: '',
+                    title: '',
+                    description: []
+                }, {
+                    imgsrc: '',
+                    title: '',
+                    description: []
+                }]
+            ],
+            MASTERKEY: 0,
+            expanded: [false, false, false],
             firstSwiperOptions: {
                 effect: 'coverflow',
                 loop: true,
                 on: {
                   'slideChange':  () => {
-                      const currentIndex = this.$refs.firstSwiper.$swiper.realIndex
-                      this.expandedFirst = false; this.expandedSecond = false; this.expandedThird = false
-                      if (currentIndex === 0) this.expandedSecond = true
-                      if (currentIndex === 1) this.expandedThird = true
-                      if (currentIndex === 2) this.expandedFirst = true
+                      let idx = this.$refs.firstSwiper.$swiper.realIndex+1
+                      if (idx === 3) idx = 0
+                      const tmp = [false, false, false]
+                      tmp[idx] = true
+                      this.expanded = tmp
                   }
                 },
                 preventClicksPropagation: false,
@@ -128,9 +128,9 @@ Vue.component('first-slider', {
                 passiveListeners: false,
                 coverflowEffect: {
                     rotate: 0,
-                    stretch: -50,
-                    depth: 200,
-                    modifier: 4,
+                    stretch: -30,
+                    depth: 70,
+                    modifier: 5,
                     slideShadows: true
                 },
             }
