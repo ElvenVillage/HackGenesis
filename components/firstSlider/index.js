@@ -104,9 +104,11 @@ Vue.component('first-slider', {
                 loop: true,
                 on: {
                   'slideChange':  () => {
-                      const currentIndex = this.$refs.firstSwiper.$swiper.realIndex
-                      for (let i = 0; i < 3; i++) this.expanded[i] = false
-                      this.expanded[currentIndex] = true
+                      let idx = this.$refs.firstSwiper.$swiper.realIndex+1
+                      if (idx === 3) idx = 0
+                      const tmp = [false, false, false]
+                      tmp[idx] = true
+                      this.expanded = tmp
                   }
                 },
                 preventClicksPropagation: false,
