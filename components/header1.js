@@ -6,7 +6,7 @@ Vue.component('header1', {
 			
 				<div class="nav__row">
 					<div class="null"></div>
-						<a href="" class="nav__logo"><img src="img/logo.png"><p>+79819030068</p></a>
+						<a href="" class="nav__logo"><img src="img/logo.png"></a>
 
 					<div class="nav__menu menu">
 						<div class="menu__icon icon__menu">
@@ -17,8 +17,9 @@ Vue.component('header1', {
 						<nav class="menu__body">
 							<ul class="menu__list">
 								<li><a href="#adress" class="menu__link">Открыть Брокерский счет</a></li>
-								<li><a href="#" class="menu__link">Научится</a></li>
 								<li><a href="#sale" class="menu__link">О компании</a></li>
+								<li><a href="#sale" class="menu__link">Тарифы</a></li>
+								<li><a href="#" class="menu__link">Научиться</a></li>
 							</ul>
 						</nav>
 					</div>
