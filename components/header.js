@@ -1,5 +1,5 @@
 Vue.component('header', {
-    template: '
+    template: `
 	<div class="nav">
 		<div class="container">
 
@@ -53,5 +53,5 @@ Vue.component('header', {
 			</div>
 		</div>
 		
-		'
+		`
 })
