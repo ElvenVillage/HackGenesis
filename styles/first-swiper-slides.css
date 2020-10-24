@@ -5,6 +5,16 @@
 .swiper-wrapper {
     padding-top: 50px;
 }
+.swiper-button-next {
+    opacity: 0;
+    width: 30%;
+    height: 50%;
+}
+.swiper-button-prev {
+    opacity: 0;
+    width: 30%;
+    height: 50%;
+}
 .swiper-slide {
     display: flex;
     justify-content: center;
