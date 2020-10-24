@@ -18,7 +18,7 @@ Vue.component('first-slider', {
                  <div>
                     <transition name="slide-fade">
                     <div v-show="expandedFirst">
-                      <ul>
+                      <ul class="dot">
                         <li class="dot">Ежедневная прибыль 3%</li>
                         <li class="dot">Вывод прибыли: в любое время</li>
                         <li class="dot">Тело депозита: возвращается</li>
@@ -40,7 +40,7 @@ Vue.component('first-slider', {
             </div><div>
                <transition name="slide-fade">
                <div v-show="expandedSecond">
-                  <ul>
+                  <ul class="dot">
                         <li class="dot">Ежедневная прибыль 3%</li>
                         <li class="dot">Вывод прибыли: в любое время</li>
                         <li class="dot">Тело депозита: возвращается</li>
@@ -61,7 +61,7 @@ Vue.component('first-slider', {
             </div><div>
               <transition name="slide-fade">
                <div v-show="expandedThird">
-               <ul>
+               <ul class="dot">
                         <li class="dot">Ежедневная прибыль 3%</li>
                         <li class="dot">Вывод прибыли: в любое время</li>
                         <li class="dot">Тело депозита: возвращается</li>

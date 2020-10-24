@@ -52,7 +52,7 @@
     background-position: center;
     background-size: cover;
 }
-ul {
+ul.dot {
     display: inline-block;
     text-align: left;
 }
