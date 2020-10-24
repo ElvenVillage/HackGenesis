@@ -56,7 +56,7 @@ ul {
     display: inline-block;
     text-align: left;
 }
-li::before {
+li.dot::before {
     content: "• ";
     color: #0180ff; /* or whatever color you prefer */
 }

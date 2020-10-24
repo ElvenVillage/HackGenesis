@@ -19,10 +19,10 @@ Vue.component('first-slider', {
                     <transition name="slide-fade">
                     <div v-show="expandedFirst">
                       <ul>
-                        <li>Ежедневная прибыль 3%</li>
-                        <li>Вывод прибыли: в любое время</li>
-                        <li>Тело депозита: возвращается</li>
-                        <li>Минимальная сумма: нет</li>
+                        <li class="dot">Ежедневная прибыль 3%</li>
+                        <li class="dot">Вывод прибыли: в любое время</li>
+                        <li class="dot">Тело депозита: возвращается</li>
+                        <li class="dot">Минимальная сумма: нет</li>
                       </ul>
                      <div style="margin-top: 20px">
                          <button class="button">Выбрать</button>
@@ -41,10 +41,10 @@ Vue.component('first-slider', {
                <transition name="slide-fade">
                <div v-show="expandedSecond">
                   <ul>
-                        <li>Ежедневная прибыль 3%</li>
-                        <li>Вывод прибыли: в любое время</li>
-                        <li>Тело депозита: возвращается</li>
-                        <li>Минимальная сумма: нет</li>
+                        <li class="dot">Ежедневная прибыль 3%</li>
+                        <li class="dot">Вывод прибыли: в любое время</li>
+                        <li class="dot">Тело депозита: возвращается</li>
+                        <li class="dot">Минимальная сумма: нет</li>
                       </ul>
                      <div style="margin-top: 20px">
                          <button class="button">Выбрать</button>
@@ -62,10 +62,10 @@ Vue.component('first-slider', {
               <transition name="slide-fade">
                <div v-show="expandedThird">
                <ul>
-                        <li>Ежедневная прибыль 3%</li>
-                        <li>Вывод прибыли: в любое время</li>
-                        <li>Тело депозита: возвращается</li>
-                        <li>Минимальная сумма: нет</li>
+                        <li class="dot">Ежедневная прибыль 3%</li>
+                        <li class="dot">Вывод прибыли: в любое время</li>
+                        <li class="dot">Тело депозита: возвращается</li>
+                        <li class="dot">Минимальная сумма: нет</li>
                       </ul>
                      <div style="margin-top: 20px">
                          <button class="button">Выбрать</button>
