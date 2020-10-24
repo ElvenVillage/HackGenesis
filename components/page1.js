@@ -1,9 +1,11 @@
 Vue.component('page1', {
     template: `
     				<div class="page1">
+    					<div class="container">
     						<div class="page1__text"><p>Начни инвестировать<p> <p> \n прямо сейчас!<p></div>
-								<div class="page1__img"><img src="img/finance_analytics_monochromatic.svg" alt=""></div>
-    					<div class="waveWrapper waveAnimation">
+    						
+    						<div class="page1__img"><img src="img/finance_analytics_monochromatic.svg" alt=""></div>
+    					</div><div class="waveWrapper waveAnimation">
 						  <div class="waveWrapperInner bgTop">
 						    <div class="wave waveTop" style="background-image: url('http://front-end-noobs.com/jecko/img/wave-top.png')"></div>
 						  </div>
