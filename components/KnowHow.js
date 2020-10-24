@@ -5,10 +5,10 @@ Vue.component('know-how', {
                 position: absolute; left: 100px; top: 120px">Полезно знать</div>
     <div style="display: grid; grid-template-columns: 1fr 2fr">
         <div></div>
-        <img src="/img/chel.png" style="position: absolute; bottom: 100px">
+        <img src="img/data_analytics.svg" style="position: absolute; bottom: 60px; width: 500px; height: 550px; left: 110px; z-index: 1000">
         <div>
             <table style="background-color: white; color: #82a7bb; border-radius: 30px;
-                         padding: 50px">
+                         padding: 50px; z-index: 600">
                <thead style="font-size: larger; font-weight: bold">Примечательные плюсы продуктов</thead>
                <tbody>
                    <tr>
