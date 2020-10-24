@@ -2,20 +2,31 @@
 	padding-top: 75px;
 	height: 100vh;
 	width: 100%;
-	background-color: #2c8dfb;
+	background-color: #2328ec;
 	position: relative;
 
 }
+.container{
+	@media (max-width: 1334px) {
+	margin: 0 0;}
+}
 .page1__text{
-	z-index: 2;
-	margin-left: 100px;
-	margin-top: 150px;
+	z-index: 21;
+	margin-left: 150px;
+	margin-top: 120px;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 
 	color: #fff;
-	font-size: 5em;
+	font-size: 4.5em;
+	@media (max-width: 1334px) {
+
+		margin-left: 10px;
+	}
+	@media (max-width: 1144px) {
+		margin-top: 50px;
+	}
 	@media (max-width: 900px) {
 		align-items: center;
 			font-size: 4em;
@@ -23,26 +34,37 @@ margin-top: 10px;
 margin-left: 50px;
 	}
 		@media (max-width: 684px) {
-			font-size: 7vw;
+font-size: 8vw;
 margin-top: 10px;
 margin-left: 10px;
 		align-items: center;
-
+}
+& p{
+	margin: -8px;
+	@media (max-width: 606px) {
+		margin: 0px;
+	}
 }
 }
 
 .page1__img{
-	z-index: 0;
+	z-index: 20;
 position: absolute;
 top: 100px;
-right: 0;
-height: 60vh;
+right: 50px;
+height: 80vh;
 width: 50vw;
 @media (max-width: 900px) {
 	top: 30vh;
 		height: 60vh;
 		width: 100vw;
+		right:0px;
+
     }
+    @media (max-width: 600px) {
+    	width: 100vw;
+    }
+
 	& img{
 		z-index: 0;
 		width: 100%;
@@ -79,7 +101,7 @@ width: 50vw;
     overflow: hidden;
     height: 20vh;
     bottom: -1px;
-    background-image: linear-gradient(to top, #0051cb 20%, #2c8dfb 80%);
+    background-image: linear-gradient(to top, #0051cb 20%, #2328ec 80%);
 }
 .bgTop {
     z-index: 15;
