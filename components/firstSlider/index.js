@@ -6,29 +6,38 @@ Vue.component('first-slider', {
             class="swiper">
             <swiper-slide class="swiper-slide">
             <div>
+            <first-slide></first-slide>
                <p @click="expandFirst">Подробнее</p>
     
-               <div v-show="expandedFirst">
+               <transition name="fade">
+               <div v-show="expandedFirst" style="position: absolute">
                   Скрытый текст
                </div>
+               </transition>
                </div>
             </swiper-slide>
             <swiper-slide class="swiper-slide">
             <div>
+            <second-slide></second-slide>
                <p @click="expandSecond">Подробнее</p>
     
-               <div v-show="expandedSecond">
+               <transition name="fade">
+               <div v-show="expandedSecond"style="position: absolute">
                   Скрытый текст
                </div>
+               </transition>
                </div>
             </swiper-slide>
             <swiper-slide class="swiper-slide"> 
             <div>
+            <third-slide></third-slide>
                 <p @click="expandThird">Подробнее</p>
     
-               <div v-show="expandedThird">
+              <transition name="fade">
+               <div v-show="expandedThird"style="position: absolute">
                   Скрытый текст
                </div>
+               </transition>
                </div>
             </swiper-slide>
             <div class="swiper-pagination" slot="pagination"></div>

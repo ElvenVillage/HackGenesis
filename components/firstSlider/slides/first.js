@@ -1,16 +1,5 @@
 Vue.component('first-slide', {
     template: `
-    <div>
-        <p @click="expanded = !expanded">Подробнее</p>
-    
-        <div v-if="expanded">
-             Скрытый текст
-         </div>
-    </div>
+   <div>Первый слайд</div>
     `,
-    data: function() {
-        return {
-            expanded: false
-        }
-    }
 })
