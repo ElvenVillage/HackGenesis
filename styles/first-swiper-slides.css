@@ -5,6 +5,22 @@
 .swiper-wrapper {
     padding-top: 50px;
 }
+.fade-enter-active, .fade-leave-active {
+    transition: opacity .5s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active до версии 2.1.8 */ {
+    opacity: 0;
+}
+.swiper-button-next {
+    opacity: 0;
+    width: 30%;
+    height: 50%;
+}
+.swiper-button-prev {
+    opacity: 0;
+    width: 30%;
+    height: 50%;
+}
 .swiper-slide {
     display: flex;
     justify-content: center;
