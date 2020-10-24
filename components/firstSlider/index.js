@@ -42,10 +42,10 @@ Vue.component('first-slider', {
                <article name="slide-fade">
                <div v-show="expandedSecond">
                   <ul class="dot" style="background-color: white; color: black">
-                        <li class="dot">Ежедневная прибыль 3%</li>
-                        <li class="dot">Вывод прибыли: в любое время</li>
-                        <li class="dot">Тело депозита: возвращается</li>
-                        <li class="dot">Минимальная сумма: нет</li>
+                        <li class="dot">Ежедневная прибыль 0%</li>
+                        <li class="dot">Вывод прибыли: раз в полгода</li>
+                        <li class="dot">Тело депозита: что</li>
+                        <li class="dot">Минимальная сумма: 100$</li>
                         <div style="margin-top: 20px">
                          <button class="button">Выбрать</button>
                      </div>
@@ -64,10 +64,10 @@ Vue.component('first-slider', {
               <article name="slide-fade">
                <div v-show="expandedThird">
                <ul class="dot"style="background-color: white; color: black">
-                        <li class="dot">Ежедневная прибыль 3%</li>
-                        <li class="dot">Вывод прибыли: в любое время</li>
-                        <li class="dot">Тело депозита: возвращается</li>
-                        <li class="dot">Минимальная сумма: нет</li>
+                        <li class="dot">Ежедневная прибыль 5%</li>
+                        <li class="dot">Вывод прибыли: невозможно</li>
+                        <li class="dot">Тело депозита: не возвращается</li>
+                        <li class="dot">Минимальная сумма: 6$</li>
                         <div style="margin-top: 20px">
                          <button class="button">Выбрать</button>
                      </div>
@@ -128,9 +128,9 @@ Vue.component('first-slider', {
                 passiveListeners: false,
                 coverflowEffect: {
                     rotate: 0,
-                    stretch: -100,
-                    depth: 300,
-                    modifier: 3,
+                    stretch: -50,
+                    depth: 200,
+                    modifier: 4,
                     slideShadows: true
                 },
             }
