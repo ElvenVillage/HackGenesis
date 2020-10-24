@@ -119,10 +119,10 @@ Vue.component('first-slider', {
                 passiveListeners: false,
                 coverflowEffect: {
                     rotate: 0,
-                    stretch: 1,
-                    depth: 100,
+                    stretch: 0,
+                    depth: 0,
                     modifier: 1,
-                    slideShadows: false
+                    slideShadows: true
                 },
             }
         }
