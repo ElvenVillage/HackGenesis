@@ -45,19 +45,26 @@
     justify-content: center;
     align-items: center;
     width: 300px;
-    height: 300px;
+    height: 500px;
+    color: white;
     text-align: center;
     font-weight: lighter;
-    background-color: white;
+    background-color: #0181fe;
     background-position: center;
     background-size: cover;
 }
 ul.dot {
+    height: 480px;
     display: inline-block;
     text-align: left;
+    background-color: white;
+    color: black;
+    border-radius: 20px;
+    padding: 5px 10px 5px 5px;
 }
 li.dot::before {
     content: "• ";
+    margin-left: 5px;
     color: #0180ff; /* or whatever color you prefer */
 }
 .button {

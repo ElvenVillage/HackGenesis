@@ -23,10 +23,11 @@ Vue.component('first-slider', {
                         <li class="dot">Вывод прибыли: в любое время</li>
                         <li class="dot">Тело депозита: возвращается</li>
                         <li class="dot">Минимальная сумма: нет</li>
-                      </ul>
-                     <div style="margin-top: 20px">
+                        <div style="margin-top: 20px">
                          <button class="button">Выбрать</button>
                      </div>
+                      </ul>
+                 
                     </div>
                     </transition>
                    </div>
@@ -40,15 +41,16 @@ Vue.component('first-slider', {
             </div><div>
                <transition name="slide-fade">
                <div v-show="expandedSecond">
-                  <ul class="dot">
+                  <ul class="dot" style="background-color: white; color: black">
                         <li class="dot">Ежедневная прибыль 3%</li>
                         <li class="dot">Вывод прибыли: в любое время</li>
                         <li class="dot">Тело депозита: возвращается</li>
                         <li class="dot">Минимальная сумма: нет</li>
-                      </ul>
-                     <div style="margin-top: 20px">
+                        <div style="margin-top: 20px">
                          <button class="button">Выбрать</button>
                      </div>
+                      </ul>
+                    
                </div>
                </transition></div>
                </div>
@@ -61,15 +63,16 @@ Vue.component('first-slider', {
             </div><div>
               <transition name="slide-fade">
                <div v-show="expandedThird">
-               <ul class="dot">
+               <ul class="dot"style="background-color: white; color: black">
                         <li class="dot">Ежедневная прибыль 3%</li>
                         <li class="dot">Вывод прибыли: в любое время</li>
                         <li class="dot">Тело депозита: возвращается</li>
                         <li class="dot">Минимальная сумма: нет</li>
-                      </ul>
-                     <div style="margin-top: 20px">
+                        <div style="margin-top: 20px">
                          <button class="button">Выбрать</button>
                      </div>
+                      </ul>
+                     
                </div>
                </transition></div>
                </div>
@@ -115,7 +118,7 @@ Vue.component('first-slider', {
                 touchStartPreventDefault: false,
                 passiveListeners: false,
                 coverflowEffect: {
-                    rotate: 10,
+                    rotate: 0,
                     stretch: 1,
                     depth: 100,
                     modifier: 1,
