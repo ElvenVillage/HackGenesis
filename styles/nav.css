@@ -100,9 +100,10 @@ body {
       padding: 0 10px; } }
 
 .nav {
+
   background-color: #2328ec;
   z-index: 9999;
-  position: fixed;
+  
   width: 100%; }
   .nav .nav__row {
     display: -webkit-box;
