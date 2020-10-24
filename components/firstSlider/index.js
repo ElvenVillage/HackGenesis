@@ -1,6 +1,7 @@
 Vue.component('first-slider', {
     template: `
-    <swiper ref="swiperComponents"
+    <div class="swiper-wrapper">
+        <swiper ref="swiperComponents"
             :options="firstSwiperOptions"
             class="swiper">
             <swiper-slide class="swiper-slide">
@@ -13,7 +14,8 @@ Vue.component('first-slider', {
                 <third-slide></third-slide>
             </swiper-slide>
             <div class="swiper-pagination" slot="pagination"></div>
-</swiper>
+        </swiper>
+    </div>
     `,
     data: function () {
         return {
@@ -31,7 +33,7 @@ Vue.component('first-slider', {
                     stretch: 5,
                     depth: 100,
                     modifier: 1,
-                    slideShadows : true
+                    slideShadows: true
                 },
             }
         }
