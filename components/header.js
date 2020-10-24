@@ -1,4 +1,4 @@
-Vue.component('header', {
+Vue.component('header1', {
     template: `
 	<div class="nav">
 		<div class="container">
@@ -52,6 +52,6 @@ Vue.component('header', {
 			</div>
 			</div>
 		</div>
-		
+
 		`
 })
