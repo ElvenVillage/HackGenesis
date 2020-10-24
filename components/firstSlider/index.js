@@ -27,8 +27,8 @@ Vue.component('first-slider', {
                     clickable: true
                 },
                 coverflowEffect: {
-                    rotate: 10,
-                    stretch: 10,
+                    rotate: 0,
+                    stretch: 5,
                     depth: 100,
                     modifier: 1,
                     slideShadows : true
