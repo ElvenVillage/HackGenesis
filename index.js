@@ -8,6 +8,7 @@ new Vue({
     data: {
         opts: {
             start: 0,
+            dir: 'v'
         }
     }
 })
