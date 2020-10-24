@@ -1,10 +1,16 @@
+slidesMobile = 3
+mobileHeight = 0
+if (window.screen.availWidth <= 425) {
+    slidesMobile = 1
+    mobileHeight = window.screen.availHeight
+}
 Vue.component('first-slider', {
     template: `
     <div class="swiper-wrapper">
         <swiper ref="firstSwiper"
             :options="firstSwiperOptions"
             class="swiper">
-            <swiper-slide class="swiper-slide">
+            <swiper-slide class="swiper-slide" ${(mobileHeight!=0)? 'style="height:'+mobileHeight+'px"' : ''}>
             <div>
             <first-slide></first-slide>
                <p @click="expandFirst">Подробнее</p>
@@ -16,7 +22,7 @@ Vue.component('first-slider', {
                </transition>
                </div>
             </swiper-slide>
-            <swiper-slide class="swiper-slide">
+            <swiper-slide class="swiper-slide" ${(mobileHeight!=0)? 'style="height:'+mobileHeight+'px"' : ''}>
             <div>
             <second-slide></second-slide>
                <p @click="expandSecond">Подробнее</p>
@@ -28,7 +34,7 @@ Vue.component('first-slider', {
                </transition>
                </div>
             </swiper-slide>
-            <swiper-slide class="swiper-slide"> 
+            <swiper-slide class="swiper-slide" ${(mobileHeight!=0)? 'style="height:'+mobileHeight+'px"' : ''}> 
             <div>
             <third-slide></third-slide>
                 <p @click="expandThird">Подробнее</p>
@@ -66,7 +72,7 @@ Vue.component('first-slider', {
                 effect: 'coverflow',
                 loop: true,
                 preventClicksPropagation: false,
-                slidesPerView: 3,
+                slidesPerView: slidesMobile,
                 spaceBetween: 30,
                 preventClicks: false,
                 navigation: {
