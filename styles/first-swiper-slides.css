@@ -21,6 +21,7 @@
 .swiper {
     height: 100%;
     width: 100%;
+    justify-content: center;
     background-color: white;
 }
 .swiper-wrapper {

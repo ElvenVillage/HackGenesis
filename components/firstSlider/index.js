@@ -6,7 +6,7 @@ if (window.screen.availWidth <= 425) {
 }
 Vue.component('first-slider', {
     template: `
-    <div class="swiper-wrapper">
+    <div class="swiper-wrapper" >
         <swiper ref="firstSwiper"
             :options="firstSwiperOptions"
             class="swiper">
@@ -16,7 +16,7 @@ Vue.component('first-slider', {
                     <first-slide @click.native="expandFirst" :class="{'left-column-before': !expandedFirst}"></first-slide>
                   </div>
                  <div>
-                    <transition name="slide-fade">
+                    <article name="slide-fade">
                     <div v-show="expandedFirst">
                       <ul class="dot">
                         <li class="dot">Ежедневная прибыль 3%</li>
@@ -29,7 +29,7 @@ Vue.component('first-slider', {
                       </ul>
                  
                     </div>
-                    </transition>
+                    </article>
                    </div>
                </div>
             </swiper-slide>
@@ -39,7 +39,7 @@ Vue.component('first-slider', {
             <second-slide @click.native="expandSecond" :class="{'left-column-before': !expandedSecond}"></second-slide>
                
             </div><div>
-               <transition name="slide-fade">
+               <article name="slide-fade">
                <div v-show="expandedSecond">
                   <ul class="dot" style="background-color: white; color: black">
                         <li class="dot">Ежедневная прибыль 3%</li>
@@ -52,7 +52,7 @@ Vue.component('first-slider', {
                       </ul>
                     
                </div>
-               </transition></div>
+               </article></div>
                </div>
             </swiper-slide>
             <swiper-slide class="swiper-slide" ${(mobileHeight != 0) ? 'style="height:' + mobileHeight + 'px"' : ''}> 
@@ -61,7 +61,7 @@ Vue.component('first-slider', {
             <third-slide :class="{'left-column-before': !expandedThird}" @click.native="expandThird"></third-slide>
             
             </div><div>
-              <transition name="slide-fade">
+              <article name="slide-fade">
                <div v-show="expandedThird">
                <ul class="dot"style="background-color: white; color: black">
                         <li class="dot">Ежедневная прибыль 3%</li>
@@ -74,7 +74,7 @@ Vue.component('first-slider', {
                       </ul>
                      
                </div>
-               </transition></div>
+               </article></div>
                </div>
             </swiper-slide>
             <div class="swiper-pagination" slot="pagination"></div>
@@ -102,6 +102,15 @@ Vue.component('first-slider', {
             firstSwiperOptions: {
                 effect: 'coverflow',
                 loop: true,
+                on: {
+                  'slideChange':  () => {
+                      const currentIndex = this.$refs.firstSwiper.$swiper.realIndex
+                      this.expandedFirst = false; this.expandedSecond = false; this.expandedThird = false
+                      if (currentIndex === 0) this.expandedSecond = true
+                      if (currentIndex === 1) this.expandedThird = true
+                      if (currentIndex === 2) this.expandedFirst = true
+                  }
+                },
                 preventClicksPropagation: false,
                 slidesPerView: slidesMobile,
                 spaceBetween: 30,
@@ -119,9 +128,9 @@ Vue.component('first-slider', {
                 passiveListeners: false,
                 coverflowEffect: {
                     rotate: 0,
-                    stretch: 0,
-                    depth: 0,
-                    modifier: 1,
+                    stretch: -100,
+                    depth: 300,
+                    modifier: 3,
                     slideShadows: true
                 },
             }
