@@ -10,40 +10,68 @@ Vue.component('first-slider', {
         <swiper ref="firstSwiper"
             :options="firstSwiperOptions"
             class="swiper">
-            <swiper-slide class="swiper-slide" ${(mobileHeight!=0)? 'style="height:'+mobileHeight+'px"' : ''}>
-            <div>
-            <first-slide></first-slide>
-               <p @click="expandFirst">Подробнее</p>
-    
-               <transition name="fade">
-               <div v-show="expandedFirst" style="position: absolute">
-                  Скрытый текст
-               </div>
-               </transition>
-               </div>
-            </swiper-slide>
-            <swiper-slide class="swiper-slide" ${(mobileHeight!=0)? 'style="height:'+mobileHeight+'px"' : ''}>
-            <div>
-            <second-slide></second-slide>
-               <p @click="expandSecond">Подробнее</p>
-    
-               <transition name="fade">
-               <div v-show="expandedSecond"style="position: absolute">
-                  Скрытый текст
-               </div>
-               </transition>
+                <swiper-slide class="swiper-slide" ${(mobileHeight != 0) ? 'style="height:' + mobileHeight + 'px"' : ''}>
+                <div v-bind:class="{'expanded-two-columns': expandedFirst}">
+                  <div>
+                    <first-slide @click.native="expandFirst" :class="{'left-column-before': !expandedFirst}"></first-slide>
+                  </div>
+                 <div>
+                    <transition name="slide-fade">
+                    <div v-show="expandedFirst">
+                      <ul>
+                        <li>Ежедневная прибыль 3%</li>
+                        <li>Вывод прибыли: в любое время</li>
+                        <li>Тело депозита: возвращается</li>
+                        <li>Минимальная сумма: нет</li>
+                      </ul>
+                     <div style="margin-top: 20px">
+                         <button class="button">Выбрать</button>
+                     </div>
+                    </div>
+                    </transition>
+                   </div>
                </div>
             </swiper-slide>
-            <swiper-slide class="swiper-slide" ${(mobileHeight!=0)? 'style="height:'+mobileHeight+'px"' : ''}> 
+            <swiper-slide class="swiper-slide" ${(mobileHeight != 0) ? 'style="height:' + mobileHeight + 'px"' : ''}>
+            <div v-bind:class="{'expanded-two-columns': expandedSecond}">
             <div>
-            <third-slide></third-slide>
-                <p @click="expandThird">Подробнее</p>
-    
-              <transition name="fade">
-               <div v-show="expandedThird"style="position: absolute">
-                  Скрытый текст
+            <second-slide @click.native="expandSecond" :class="{'left-column-before': !expandedSecond}"></second-slide>
+               
+            </div><div>
+               <transition name="slide-fade">
+               <div v-show="expandedSecond">
+                  <ul>
+                        <li>Ежедневная прибыль 3%</li>
+                        <li>Вывод прибыли: в любое время</li>
+                        <li>Тело депозита: возвращается</li>
+                        <li>Минимальная сумма: нет</li>
+                      </ul>
+                     <div style="margin-top: 20px">
+                         <button class="button">Выбрать</button>
+                     </div>
                </div>
-               </transition>
+               </transition></div>
+               </div>
+            </swiper-slide>
+            <swiper-slide class="swiper-slide" ${(mobileHeight != 0) ? 'style="height:' + mobileHeight + 'px"' : ''}> 
+            <div v-bind:class="{'expanded-two-columns': expandedThird}">
+            <div>
+            <third-slide :class="{'left-column-before': !expandedThird}" @click.native="expandThird"></third-slide>
+            
+            </div><div>
+              <transition name="slide-fade">
+               <div v-show="expandedThird">
+               <ul>
+                        <li>Ежедневная прибыль 3%</li>
+                        <li>Вывод прибыли: в любое время</li>
+                        <li>Тело депозита: возвращается</li>
+                        <li>Минимальная сумма: нет</li>
+                      </ul>
+                     <div style="margin-top: 20px">
+                         <button class="button">Выбрать</button>
+                     </div>
+               </div>
+               </transition></div>
                </div>
             </swiper-slide>
             <div class="swiper-pagination" slot="pagination"></div>
@@ -87,11 +115,11 @@ Vue.component('first-slider', {
                 touchStartPreventDefault: false,
                 passiveListeners: false,
                 coverflowEffect: {
-                    rotate: 0,
-                    stretch: 5,
+                    rotate: 10,
+                    stretch: 1,
                     depth: 100,
                     modifier: 1,
-                    slideShadows: true
+                    slideShadows: false
                 },
             }
         }
