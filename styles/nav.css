@@ -74,7 +74,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 body {
-  font-family: arial_bold;}
+  font-family: arial_bold;
+  font-weight: bold;
+}
 
 .wrapper {
   width: 100%;
