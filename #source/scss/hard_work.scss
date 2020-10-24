@@ -1,0 +1,71 @@
+.hard_work {
+	height: 100vh;
+	width: 100%;
+	background-color: #fff;
+	position: relative;
+	
+	background-color: #282050;
+	@media (max-width: 658px) {
+		background-size: 140vw 100%;
+	}
+
+
+}
+.container {}
+.hard_work__work{
+margin-left: 10vw;
+
+width: 50vw;
+& img{
+		width: 100%;
+		height: 100%;
+	}
+}
+.hard_work__smarter {
+	z-index: 10;
+	position: absolute;
+	width: 50vw;
+	
+	right: -400px;
+	top: -100px;
+	& img{
+		width: 100%;
+		height: 100%;
+	}
+}
+.hard_work__question {
+	width: 100%;
+	height: 50px;
+
+}
+.hard_work__task {
+	height: 100%;
+	background-color: #fed243;
+	width: 50%;
+	color: #000;
+	float: right;
+	margin-right: 30px;
+	border:0px solid red;
+	border-radius: 10px;
+	position: relative;
+
+}
+.hard_work__task:after {
+    position: absolute;
+    top: 0px;
+
+    right: -18px;
+    display: inline-block;
+    border-top: 25px solid transparent;
+    border-left: 25px solid #fed243;
+    border-right: 0 solid #fed243;
+    border-bottom: 25px solid transparent;
+    content: " ";
+}
+
+
+.hard_work__Htext {}
+.hard_work__infos {}
+.hard_work__info {}
+.hard_work__value {}
+.hard_work__text {}
