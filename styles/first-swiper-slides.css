@@ -34,6 +34,10 @@
     grid-template-columns: 1fr 1fr;
 }
 
+.selected-slider {
+    border: 1px red;
+}
+
 .swiper-button-next {
     opacity: 0;
     width: 30%;
@@ -52,12 +56,12 @@
     align-items: center;
     width: 200px;
     height: 333px;
-    color: white;
     text-align: center;
     font-weight: lighter;
     background-color: #0181fe;
     background-position: center;
     background-size: cover;
+    color: black;
 }
 ul.dot {
     height: 480px;
