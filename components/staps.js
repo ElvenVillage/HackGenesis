@@ -24,9 +24,9 @@ Vue.component('staps', {
              <img src="img/serebro.png"style="height: 60px; width: 60px"><br>
              Людилньб<hr><br>
              <button class="button">Далее</button></div></swiper-slide>
-             <swiнгper-slide class="swiper-slide"><div style="position: absolute; top: 20px">
+             <swiper-slide class="swiper-slide"><div style="position: absolute; top: 20px">
              <img src="img/gold.png"style="height: 60px; width: 60px"><br>Профессионал<hr><br>
-             <button class="button">Далее</button></div></swiнгper-slide>
+             <button class="button">Далее</button></div></swiper-slide>
              <div class="swiper-pagination" slot="pagination"></div>
             <div class="swiper-button-prev" slot="button-prev"></div>
             <div class="swiper-button-next" slot="button-next"></div>
