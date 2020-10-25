@@ -1,6 +1,6 @@
 Vue.component('staps', {
     template: `
-    <div class="staps" style="font-family: 'arial_bold', Arial, sans-serif">
+    <div class="staps" id="stap" style="font-family: 'arial_bold', Arial, sans-serif">
         <div class="container">
             <div class="page-header">
             </div>

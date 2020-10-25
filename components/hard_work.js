@@ -1,10 +1,10 @@
 Vue.component('hard_work', {
     template: `		
-    <div class="hard_work">
+    <div class="hard_work " id="qqq">
     		<div class="hard_work__work"><img src="img/nadp.png" alt=""></div>
     		<div class="hard_work__smarter"><img src="img/smarter.webp" alt=""></div>
     		<div class="hard_work__question">
-    			<div class="hard_work__task">
+    			<div class="hard_work__task" >
     				Почему стоит выбрать "БКС Брокер"?
     			</div>
     		</div>
