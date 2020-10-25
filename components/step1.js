@@ -55,33 +55,45 @@ Vue.component('step-2', {
                     type: '#Защищенные инвестиции'
                 }],[
                 {
-                    imgsrc: '',
-                    title: '',
-                    description: []
+                    imgsrc: 'img/LUKOIL_Logo.svg',
+                    title: 'LUKOIL',
+                    percent: 'до 5%',
+                    price: 'от 10000 рублей',
+                    type: '#Акции'
                 }, {
-                    imgsrc: '',
-                    title: '',
-                    description: []
+                    imgsrc: 'img/Facebook.svg',
+                    title: 'Facebook',
+                    percent: 'до 4%',
+                    price: 'от 10000 рублей',
+                    type: '#Защищенные инвестиции'
                 }, {
-                    imgsrc: '',
-                    title: '',
-                    description: []
+                    imgsrc: 'img/LUKOIL_Logo.svg',
+                    title: 'LUKOIL',
+                    percent: 'до 7%',
+                    price: 'от 40000 рублей',
+                    type: '#Акции'
                 }],[
                 {
-                    imgsrc: '',
-                    title: '',
-                    description: []
+                    imgsrc: 'img/mastercard.svg',
+                    title: 'MasterCard',
+                    percent: 'до 4%',
+                    price: 'от 40000 рублей',
+                    type: '#Защищенные инвестиции'
                 }, {
-                    imgsrc: '',
-                    title: '',
-                    description: []
+                    imgsrc: 'img/LUKOIL_Logo.svg',
+                    title: 'LUKOIL',
+                    percent: 'до 7%',
+                    price: 'от 40000 рублей',
+                    type: '#Акции'
                 }, {
-                    imgsrc: '',
-                    title: '',
-                    description: []
+                    imgsrc: 'img/Amazon.png',
+                    title: 'Amazon',
+                    percent: 'до 5%',
+                    price: 'от 30000 рублей',
+                    type: '#Защищенные инвестиции'
                 }]
             ],
-            MASTERKEY: 0
+            MASTERKEY: 2
         }
     }
 })

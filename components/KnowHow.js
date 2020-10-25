@@ -16,13 +16,13 @@ Vue.component('know-how', {
               </div>
             </div>
     <div style="font-family: 'arial_bold', Arial, sans-serif; font-size: xx-large;
-                position: absolute; left: 100px; top: 120px">Полезно знать</div>
+                position: absolute; left: 100px; top: 70px">Полезно знать</div>
     <div style="display: grid; grid-template-columns: 1fr 2fr">
         <div></div>
-        <img v-if="!isOnMobile" src="img/data_analytics.svg" style="position: absolute; bottom: 60px; width: 500px; height: 550px; left: 110px; z-index: 1000">
-        <div>
+        <img v-if="!isOnMobile" src="img/data_analytics.svg" style="position: absolute; bottom: 60px; width: 500px; height: 550px; left: 110px;">
+        <div style="z-index: 10">
             <table style="background-color: white; color: #82a7bb; border-radius: 30px;
-                         padding: 50px; z-index: 600">
+                         padding: 50px; z-index: 100">
                <thead style="font-size: larger; font-weight: bold">Примечательные плюсы продуктов</thead>
                <tbody>
                    <tr>
@@ -54,6 +54,12 @@ Vue.component('know-how', {
             </table>
         </div>
     </div>
+    <div style="display: grid; grid-template-columns: 1fr 1fr 1fr">
+    <div></div><div>
+    
+    <div style="background-color: #fff103; border-radius: 20px; position: absolute; bottom: 100px; width: 300px; height: 60px;margin-left: 100px"><a href="index.html" class="page3__btn">Что же выбрать?</a></div>
+    </div><div></div>
+</div>
 </div>`,
     data: function () {
         return {
