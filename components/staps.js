@@ -17,13 +17,16 @@ Vue.component('staps', {
         <swiper :options="secondSwiperOptions" class="swiper" ref="firstSwiper">
              <swiper-slide class="swiper-slide"><div style="position: absolute; top: 20px">
              <img src="img/platin.png" style="height: 60px; width: 60px"><br>
-             Новичок<hr>
+             Новичок<hr><br>
+             <button class="button">Далее</button>
              </div></swiper-slide>
              <swiper-slide class="swiper-slide"><div style="position: absolute; top: 20px">
              <img src="img/serebro.png"style="height: 60px; width: 60px"><br>
-             Людилньб<hr></div></swiper-slide>
+             Людилньб<hr><br>
+             <button class="button">Далее</button></div></swiper-slide>
              <swiper-slide class="swiper-slide"><div style="position: absolute; top: 20px">
-             <img src="img/gold.png"style="height: 60px; width: 60px"><br>Профессионал<hr></div></swiper-slide>
+             <img src="img/gold.png"style="height: 60px; width: 60px"><br>Профессионал<hr><br>
+             <button class="button">Далее</button></div></swiper-slide>
              <div class="swiper-pagination" slot="pagination"></div>
             <div class="swiper-button-prev" slot="button-prev"></div>
             <div class="swiper-button-next" slot="button-next"></div>
@@ -49,8 +52,6 @@ Vue.component('staps', {
                     el: '.swiper-pagination',
                     clickable: false
                 },
-                touchStartPreventDefault: false,
-                passiveListeners: false,
             }
         }
 
