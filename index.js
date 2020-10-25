@@ -8,7 +8,10 @@ new Vue({
     data: {
         opts: {
             start: 0,
-            dir: 'v'
+            dir: 'v',
+            beforeChange: function (prev, next) {
+            console.log('before', prev, next)
+          },
         }
     }
 })
