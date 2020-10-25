@@ -19,9 +19,9 @@ Vue.component('step-2', {
         <div style="flex-direction: column">
         <table v-for="(pr, idx) in investProducts[MASTERKEY]" :key="idx"
                style="background: linear-gradient(to right, #421b70, #4f76ac);
-               width: 600px; height: 100px; color: white; margin: ${(isMobile)? '-10px' : '50px'}; text-align: left">
+               width: 600px; height: 100px; margin: ${(isMobile)? '-10px' : '50px'}; text-align: left">
         <tr><td style="width: ${(isMobile)? window.screen.availWidth/4 : '150px'}"><img :src="pr.imgsrc" style="width: 150px; height: 150px; padding: 20px"></td><td>
-        <table><tr><td>{{ pr.type }}</td></tr>
+        <table style="color: white;"><tr><td>{{ pr.type }}</td></tr>
                <tr><td>{{ pr.title }}</td></tr>
                <tr><td style="width: 200px;">{{ pr.percent }}</td><td>{{ pr.price }}</td></tr></table>
          </td></tr>
@@ -93,7 +93,7 @@ Vue.component('step-2', {
                     type: '#Защищенные инвестиции'
                 }]
             ],
-            MASTERKEY: 2
+            MASTERKEY: ((money_rate < 15)? 0 : ((money_rate  < 40)? 1 : 0))
         }
     }
 })
