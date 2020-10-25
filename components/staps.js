@@ -22,20 +22,21 @@ Vue.component('staps', {
 
               <div class="timeline-panel" style="height: 100vh">
                     <div class="panel__text">Шаг 1. Укажите ваш опыт в инвестировании</div>
+                    <div style="padding-left: 50px; font-size: large">{{ courses[selectedCourse] }}</div>
                     <div class="panel__blocks">
-                        <div class="panel__block panel_block1">
+                        <div class="panel__block panel_block1" @mouseover="selectCourse(0)">
                                 <div class="panel_block__img"><img src="img/platin.png" alt=""></div>
                                 <div class="panel_block__name">Новичок</div>
                                 <div class="panel_block__text">Впервые интересуюсь</div>
-                                <a class="panel_block__btn">Далее</a>
+                                <a  class="panel_block__btn">Далее</a>
                         </div>
-                        <div class="panel__block panel_block2">
+                        <div class="panel__block panel_block2" @mouseover="selectCourse(1)">
                                 <div class="panel_block__img"><img src="img/serebro.png" alt=""></div>
                                 <div class="panel_block__name">Любитель</div>
                                 <div class="panel_block__text">Давно инетересюсь этой темой</div>
                                 <a class="panel_block__btn">Далее</a>
                         </div>
-                        <div class="panel__block panel_block3">
+                        <div class="panel__block panel_block3" @mouseover="selectCourse(2)">
                                 <div class="panel_block__img"><img src="img/gold.png" alt=""></div>
                                 <div class="panel_block__name">Профессионал</div>
                                 <div class="panel_block__text">Уже инвестирую</div>
@@ -50,5 +51,21 @@ Vue.component('staps', {
         </div>
     </div>
     </div>
-    		`
+    		`,
+    data: function() {
+        return {
+            courses: ['Вам может пригодиться раздел «Научиться»',' ' +
+            'Вам может пригодиться раздел «2»','Вам может пригодиться раздел «3»'],
+            selectedCourses: [false, false, false],
+            selectedCourse: -1,
+        }
+    },
+    methods: {
+        selectCourse(idx) {
+            const nCourses = [false, false, false]
+            nCourses[idx] = true
+            this.selectedCourse = idx
+            this.selectedCourses = nCourses
+        }
+    }
 })
