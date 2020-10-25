@@ -1,3 +1,4 @@
+let isOnMobile = window.screen.availWidth <= 425
 Vue.component('know-how', {
     template: `
 <div style="background-color: #2328ec; padding-top: 15vh">
@@ -5,7 +6,7 @@ Vue.component('know-how', {
                 position: absolute; left: 100px; top: 120px">Полезно знать</div>
     <div style="display: grid; grid-template-columns: 1fr 2fr">
         <div></div>
-        <img src="img/data_analytics.svg" style="position: absolute; bottom: 60px; width: 500px; height: 550px; left: 110px; z-index: 1000">
+        <img v-if="!isOnMobile" src="img/data_analytics.svg" style="position: absolute; bottom: 60px; width: 500px; height: 550px; left: 110px; z-index: 1000">
         <div>
             <table style="background-color: white; color: #82a7bb; border-radius: 30px;
                          padding: 50px; z-index: 600">
@@ -40,6 +41,11 @@ Vue.component('know-how', {
             </table>
         </div>
     </div>
-</div>`
+</div>`,
+    data: function () {
+        return {
+            isOnMobile: isOnMobile
+        }
+    }
     }
 )

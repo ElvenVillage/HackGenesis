@@ -8,6 +8,7 @@ Vue.component('staps', {
         <ul class="timeline">
             <li class="timeline-inverted">
               <div class="timeline-badge warning">1<i class="glyphicon glyphicon-credit-card"></i></div>
+
               <div class="timeline-panel" style="height: 100vh">
                   
                     <div class="panel__blocks">
@@ -30,6 +31,7 @@ Vue.component('staps', {
                                 <a class="panel_block__btn">Далее</a>
                         </div>
                     </div>
+
 
               </div>
             </li>
