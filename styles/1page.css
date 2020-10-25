@@ -169,7 +169,7 @@
   animation: move_wave 15s linear infinite; }
 
 .page1__btn {
-  z-index: 222;
+  z-index: 99;
   position: absolute;
   background-color: #fed243;
   padding: 15px 50px;

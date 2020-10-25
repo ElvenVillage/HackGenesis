@@ -190,6 +190,7 @@ body {
           z-index: 200; }
           .nav .menu .icon__menu span {
             position: absolute;
+            z-index: 200; 
             background-color: #fff;
             left: 0;
             width: 100%;
