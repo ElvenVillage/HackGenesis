@@ -15,7 +15,7 @@
   content: " ";
   width: 3px;
   background-color: #eeeeee;
-  left: 10%;
+  left: 0;
   margin-left: -1.5px;
 }
 .timeline > li {
@@ -43,7 +43,10 @@
   float: left;
   padding: 20px;
   position: relative;
+   @media (max-width: 576px) {
+  padding: 5px;
 
+  }
 }
 
 
@@ -56,7 +59,7 @@
   text-align: center;
   position: absolute;
   top: 16px;
-  left: 10%;
+  left: 0;
   margin-left: -40px;
   padding-top: 12px;
   background-color: #fed243;
@@ -68,7 +71,13 @@
 }
 .timeline > li.timeline-inverted > .timeline-panel {
   float: left;
-  margin-left: 200px;
+  width: 100%;
+    @media (max-width: 576px) {
+   width: 110%;
+   margin-left: -20px;
+  }
+ display: flex;
+ justify-content: center;
 }
 
 
@@ -98,4 +107,91 @@
 .timeline-body > p + p {
   margin-top: 5px;
 }
+///////////////////////////////
+.panel__blocks {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+   @media (max-width: 576px) {
+    justify-content: center;
+  }
+  align-items: center;
+  flex-wrap: wrap;
+}
+.panel__block {
+  min-width: 200px;
+  background-color: #73c8ff;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
+  padding: 20px;
+  @media (max-width: 939px) {
+    padding: 5px;
+  }
+  @media (max-width: 576px) {
+   margin-bottom:: -10px;
+  }
+}
+.panel_block1 {
+
+}
+.panel_block__img {
+  flex: 1 1 30% ;
+
+  width: 200px;
+  & img{
+    width: 100%;
+    height: 100%;
+  }
+   @media (max-width: 939px) {
+    flex: 0 0 50px ;
+    width: 100px;
+    
+  }
+  @media (max-width: 576px) {
+    width: 70px;
+    
+  }
+
+}
+.panel_block__name {
+  width: 100%;
+  text-align: center;
+  flex: 1 0 20% ;
+  font-size: 2em;
+  border-bottom: 5px solid #fff; 
+  display: flex;
+  justify-content: center;
+   @media (max-width: 576px) {
+    width: 70px;
+      font-size: 20px;
+
+  }
+}
+.panel_block__text {
+  flex: 1 0 30% ;
+
+}
+.panel_block__btn {
+  text-align: center;
+  color:#fff;
+  border-radius: 30px;
+  width: 50%;
+  padding: 10px 30px;
+  background-color: #2a214d;
+  font-size: 1em;
+  margin-top: 20px;
+  margin-bottom: 20px;
+   @media (max-width: 939px) {
+    margin-bottom: 5px;
+      margin-top: 1px;
+
+  }
+
+
+}
+.panel_block2 {}
+.panel_block3 {}
