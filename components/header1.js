@@ -6,7 +6,7 @@ Vue.component('header1', {
 			
 				<div class="nav__row">
 					<div class="null"></div>
-						<a href="" class="nav__logo"><img src="img/logo.png"></a>
+						
 
 					<div class="nav__menu menu">
 						<div class="menu__icon icon__menu">
