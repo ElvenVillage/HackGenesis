@@ -48,6 +48,14 @@
     width: 30%;
     height: 50%;
 }
+.hr {
+    display: block;
+    height: 2px;
+    border: 0;
+    border-top: 2px solid white;
+    margin: 1em 0;
+    padding: 0;
+}
 .swiper-slide {
     display: flex;
     border-radius: 25px;
