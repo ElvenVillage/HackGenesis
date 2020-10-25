@@ -1,5 +1,5 @@
 const isMobile = window.screen.availWidth <= 425
-money_rate = 0
+const maxWidth = window.screen.availWidth / 3
 Vue.component('step-2', {
     template: `
 <div class="staps" style="font-family: 'arial_bold', Arial, sans-serif">
@@ -10,7 +10,7 @@ Vue.component('step-2', {
             <div style="flex-grow: 1">
                 <ul class="timeline">
                     <li class="timeline-inverted">
-                        <div class="man"><img src="../img/step_1.svg" alt=""></div>
+                        
                         <div class="timeline-badge warning">2<i class="glyphicon glyphicon-credit-card"></i></div>
                         <div class="timeline-badge warning clsasd1 claseda"><i
                                 class="glyphicon glyphicon-credit-card"></i></div>
@@ -142,7 +142,7 @@ Vue.component('step-2', {
                     type: '#Защищенные инвестиции'
                 }]
             ],
-            MASTERKEY: ((money_rate < 15)? 0 : ((money_rate  < 40)? 1 : 0))
+            MASTERKEY: ((money_rate < 15)? 0 : ((money_rate  < 40)? 1 : 2))
         }
     }
 })
