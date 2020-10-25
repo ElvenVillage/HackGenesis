@@ -25,7 +25,7 @@ Vue.component('staps', {
                     <div class="panel__blocks">
                         <div class="panel__block panel_block1">
                                 <div class="panel_block__img"><img src="img/platin.png" alt=""></div>
-                                <div class="panel_block__name">Новичек</div>
+                                <div class="panel_block__name">Новичок</div>
                                 <div class="panel_block__text">Впервые интересуюсь</div>
                                 <a class="panel_block__btn">Далее</a>
                         </div>

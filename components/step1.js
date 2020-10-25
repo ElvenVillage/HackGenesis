@@ -34,7 +34,7 @@ Vue.component('step-2', {
                         <div class="timeline-panel" style="height: 100vh">
                             <div class="panel__text">Шаг 2. Получите бесплатные рекомендации</div>
                             <div class="panel__blocks">
-                                <div class="panel__block panel_block1" style="background-color: white">
+                                <div style="background-color: white">
                                     <div style="flex-grow: 3; padding-top: 30px">
                                         <div style="font-weight: bold; font-size: large; margin: 5px"></div>
                                         <div style="flex-direction: column">

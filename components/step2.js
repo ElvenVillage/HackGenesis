@@ -32,7 +32,7 @@ Vue.component('step-3', {
                         <div class="timeline-panel" style="height: 100vh">
                             <div class="panel__text">Готово! Вам осталось зарегистрировать счёт</div>
                             <div class="panel__blocks">
-                                <div class="panel__block panel_block1" style="background-color: white">
+                                <div style="background-color: white">
                                   <div style="display: grid; grid-template-columns: 1fr 1fr">
                                     <div style="background-color: #fed243; border-radius: 20px; width: ${(isMobile)? maxWidth : '500px'}; height: 60px;margin-left: 100px; position: relative; top: 400px"><a href="#" class="page3__btn">Открыть брокерский счёт</a></div>
                                     <div><img src="img/step3.jpg"></div>
