@@ -1,7 +1,20 @@
 let isOnMobile = window.screen.availWidth <= 425
 Vue.component('know-how', {
     template: `
+
+     
 <div style="background-color: #2328ec; padding-top: 15vh">
+   <div class="waveWrapper waveAnimation">
+              <div class="waveWrapperInner2 bgTop">
+                <div class="wave waveTop" style="background-image: url('http://front-end-noobs.com/jecko/img/wave-top.png')"></div>
+              </div>
+              <div class="waveWrapperInner2 bgMiddle">
+                <div class="wave waveMiddle" style="background-image: url('http://front-end-noobs.com/jecko/img/wave-mid.png')"></div>
+              </div>
+              <div class="waveWrapperInner2 bgBottom">
+                <div class="wave waveBottom" style="background-image: url('http://front-end-noobs.com/jecko/img/wave-bot.png')"></div>
+              </div>
+            </div>
     <div style="font-family: 'arial_bold', Arial, sans-serif; font-size: xx-large;
                 position: absolute; left: 100px; top: 120px">Полезно знать</div>
     <div style="display: grid; grid-template-columns: 1fr 2fr">
