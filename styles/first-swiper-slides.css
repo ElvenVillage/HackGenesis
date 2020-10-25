@@ -34,6 +34,10 @@
     grid-template-columns: 1fr 1fr;
 }
 
+.selected-slider {
+    border: 1px red;
+}
+
 .swiper-button-next {
     opacity: 0;
     width: 30%;
@@ -52,12 +56,12 @@
     align-items: center;
     width: 200px;
     height: 333px;
-    color: white;
     text-align: center;
     font-weight: lighter;
     background-color: #0181fe;
     background-position: center;
     background-size: cover;
+    color: black;
 }
 ul.dot {
     height: 480px;
@@ -80,19 +84,21 @@ li.dot::before {
     text-decoration: none;
     width: 100px;
     height: 30px;
+    background-color: #fed243;
     text-transform: uppercase;
     font-family: 'Exo 2', sans-serif;
     text-align: center;
-    color: #00c7ec;
-    border: 1px solid #00c7ec;
     border-radius: 5px;
     line-height: 3em;
+    position: absolute;
+    bottom: -150px;
+    right: 1px;
     box-shadow: 0 0 0 0 transparent;
 }
 .button:hover {
     color: white;
     box-shadow: 0 0 30px 0 rgba(0, 199, 236, 0.5);
-    background-color: #00c7ec;
+    background-color: #fed243;
 }
 
 .button:active {
