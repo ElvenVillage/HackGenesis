@@ -5,7 +5,7 @@ Vue.component('last-page', {
         <div></div>
         <div style="background-color: white; width: 300px; height: 300px; justify-content: right"> 
               <div style="height: 280px; width: 280px; background: url('img/qr.svg'); "></div></div>
-         <div></div><div><img src="img/information_flow.svg" style="scale: 1.5;"></div>
+         <div></div><div><img src="img/information_flow.svg" style="scale: 1.3;"></div>
          <div></div><div></div></div>
          <div v-else><div><img src="img/information_flow.svg"></div></div>
          <div></div>
