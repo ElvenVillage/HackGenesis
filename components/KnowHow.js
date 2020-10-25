@@ -16,7 +16,7 @@ Vue.component('know-how', {
               </div>
             </div>
     <div style="font-family: 'arial_bold', Arial, sans-serif; font-size: xx-large;
-                position: absolute; left: 100px; top: 70px">Полезно знать</div>
+                position: absolute; left: 100px; top: 70px; background-color: #fff103; border-radius: 20px; padding: 10px">Полезно знать</div>
     <div style="display: grid; grid-template-columns: 1fr 2fr">
         <div></div>
         <img v-if="!isOnMobile" src="img/data_analytics.svg" style="position: absolute; bottom: 60px; width: 500px; height: 550px; left: 110px;">
