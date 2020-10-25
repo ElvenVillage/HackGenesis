@@ -10,7 +10,7 @@ Vue.component('staps', {
               <div class="timeline-badge warning">1<i class="glyphicon glyphicon-credit-card"></i></div>
 
               <div class="timeline-panel" style="height: 100vh">
-                  
+                    <div class="panel__text">Шаг 1. Укажите ваш опыт в инвестировании</div>
                     <div class="panel__blocks">
                         <div class="panel__block panel_block1">
                                 <div class="panel_block__img"><img src="img/platin.png" alt=""></div>
