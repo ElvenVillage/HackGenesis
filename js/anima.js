@@ -1,4 +1,4 @@
-var isScrolling = false;
+/*var isScrolling = false;
  
 window.addEventListener("scroll", throttleScroll, false);
  
@@ -21,7 +21,7 @@ function dealWithScrolling(e) {
    /* anim(".staps__info","animate__fadeIn",0,"p",0);
     anim('.adress__item','animate__fadeInUp',1,"p",0);
     anim('#programs__item',"animate__fadeInUp",4,"p",1);*/
-    
+    /*
 }
 function anim(id,clas,delay_count,Visible,start_delay){
 	els=document.querySelectorAll(id);
@@ -57,4 +57,4 @@ function isFullyVisible(el) {
   var bottom = elementBoundary.bottom;
  
   return ((top >= 0) && (bottom <= window.innerHeight));
-}
+}*/
