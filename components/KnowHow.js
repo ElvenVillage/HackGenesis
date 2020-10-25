@@ -57,7 +57,7 @@ Vue.component('know-how', {
     <div style="display: grid; grid-template-columns: 1fr 1fr 1fr">
     <div></div><div>
     
-    <div style="background-color: #fff103; border-radius: 20px; position: absolute; bottom: 100px; width: 300px; height: 60px;margin-left: 100px"><a href="#" class="page3__btn">Что же выбрать?</a></div>
+    <div style="background-color: #fed243;border-radius: 20px; position: absolute; bottom: 150px; width: 300px; height: 60px;margin-left: 100px"><a href="#" class="page3__btn">Что же выбрать?</a></div>
     </div><div></div>
 </div>
 </div>`,

@@ -34,7 +34,7 @@ Vue.component('step-3', {
                             <div class="panel__blocks">
                                 <div style="background-color: white">
                                   <div style="display: grid; grid-template-columns: 2fr 1fr">
-                                    <div style="background-color: #fed243; border-radius: 20px; width: ${(isMobile)? maxWidth : '700px'}; height: 100px;position: relative; top: 300px; left: 100px"><a href="#" class="page3__btn" style="vertical-align: central; text-align: center">Открыть брокерский счёт</a></div>
+                                    <div style="background-color: #fed243; border-radius: 20px; width: ${(isMobile)? maxWidth : '700px'}; height: 100px;position: relative; top: 300px; left: 200px"><a href="#" class="page3__btn" style="vertical-align: central; right: 250px; bottom: -10px">Открыть брокерский счёт</a></div>
                                     <div><img src="img/step3.jpg"></div>
                                     </div>
                                 </div>

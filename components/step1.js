@@ -2,7 +2,7 @@ const isMobile = window.screen.availWidth <= 425
 const maxWidth = window.screen.availWidth / 3
 Vue.component('step-2', {
     template: `
-<div class="staps" style="font-family: 'arial_bold', Arial, sans-serif">
+<div class="staps" style="font-family: 'arial_bold', Arial, sans-serif"><a name="step2"></a>
     <div class="container">
         <div class="page-header">
         </div>
@@ -10,7 +10,7 @@ Vue.component('step-2', {
             <div style="flex-grow: 1">
                 <ul class="timeline">
                     <li class="timeline-inverted">
-                        
+                        <div class="man"><img src="../img/step2.svg" alt=""></div>
                         <div class="timeline-badge warning">2<i class="glyphicon glyphicon-credit-card"></i></div>
                         <div class="timeline-badge warning clsasd1 claseda"><i
                                 class="glyphicon glyphicon-credit-card"></i></div>
@@ -135,7 +135,7 @@ Vue.component('step-2', {
                     price: 'от 40000 рублей',
                     type: '#Акции'
                 }, {
-                    imgsrc: 'img/Amazon.png',
+                    imgsrc: 'img/amazon.png',
                     title: 'Amazon',
                     percent: 'до 5%',
                     price: 'от 30000 рублей',
