@@ -93,7 +93,7 @@ Vue.component('step-2', {
                     type: '#Защищенные инвестиции'
                 }]
             ],
-            MASTERKEY: 2
+            MASTERKEY: ((money_rate < 15)? 0 : ((money_rate  < 40)? 1 : 0))
         }
     }
 })
