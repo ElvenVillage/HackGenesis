@@ -1,7 +1,3 @@
-const isMobile = window.screen.availWidth <= 425
-money_rate = 0
-Vue.component('step-2', {
-    template: `
 <div class="staps" style="font-family: 'arial_bold', Arial, sans-serif">
     <div class="container">
         <div class="page-header">
@@ -34,7 +30,7 @@ Vue.component('step-2', {
                         <div class="timeline-panel" style="height: 100vh">
                             <div class="panel__text">Шаг 2. Получите бесплатные рекомендации</div>
                             <div class="panel__blocks">
-                                <div class="panel__block panel_block1" style="background-color: white">
+                                <div class="panel__block panel_block1">
                                     <div style="flex-grow: 3; padding-top: 30px">
                                         <div style="font-weight: bold; font-size: large; margin: 5px"></div>
                                         <div style="flex-direction: column">
@@ -77,72 +73,3 @@ Vue.component('step-2', {
 </div>
 </div>
 </div>
-
-`,
-    data: function () {
-        return {
-            expanded: [true, false, false],
-            isMobile: isMobile,
-            investProducts: [[
-                {
-                    imgsrc: 'img/yandex-icon.png',
-                    title: 'Яндекс',
-                    percent: 'до 14,5%',
-                    price: 'от 1500 рублей',
-                    type: '#Акции'
-                }, {
-                    imgsrc: 'img/sber.png',
-                    title: 'Сбербанк',
-                    percent: 'до 6%',
-                    price: 'от 10000 рублей',
-                    type: '#Защищенные инвестиции'
-                }, {
-                    imgsrc: 'img/amazon.png',
-                    title: 'Amazon',
-                    percent: 'до 6%',
-                    price: 'от 10000 рублей',
-                    type: '#Защищенные инвестиции'
-                }],[
-                {
-                    imgsrc: 'img/LUKOIL_Logo.svg',
-                    title: 'LUKOIL',
-                    percent: 'до 5%',
-                    price: 'от 10000 рублей',
-                    type: '#Акции'
-                }, {
-                    imgsrc: 'img/Facebook.svg',
-                    title: 'Facebook',
-                    percent: 'до 4%',
-                    price: 'от 10000 рублей',
-                    type: '#Защищенные инвестиции'
-                }, {
-                    imgsrc: 'img/LUKOIL_Logo.svg',
-                    title: 'LUKOIL',
-                    percent: 'до 7%',
-                    price: 'от 40000 рублей',
-                    type: '#Акции'
-                }],[
-                {
-                    imgsrc: 'img/mastercard.svg',
-                    title: 'MasterCard',
-                    percent: 'до 4%',
-                    price: 'от 40000 рублей',
-                    type: '#Защищенные инвестиции'
-                }, {
-                    imgsrc: 'img/LUKOIL_Logo.svg',
-                    title: 'LUKOIL',
-                    percent: 'до 7%',
-                    price: 'от 40000 рублей',
-                    type: '#Акции'
-                }, {
-                    imgsrc: 'img/Amazon.png',
-                    title: 'Amazon',
-                    percent: 'до 5%',
-                    price: 'от 30000 рублей',
-                    type: '#Защищенные инвестиции'
-                }]
-            ],
-            MASTERKEY: ((money_rate < 15)? 0 : ((money_rate  < 40)? 1 : 0))
-        }
-    }
-})
