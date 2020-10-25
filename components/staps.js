@@ -28,19 +28,19 @@ Vue.component('staps', {
                                 <div class="panel_block__img"><img src="img/platin.png" alt=""></div>
                                 <div class="panel_block__name">Новичок</div>
                                 <div class="panel_block__text">Впервые интересуюсь</div>
-                                <a  class="panel_block__btn">Далее</a>
+                                <a href="https://bcs.ru/studing" class="panel_block__btn">Далее</a>
                         </div>
                         <div class="panel__block panel_block2" @mouseover="selectCourse(1)">
                                 <div class="panel_block__img"><img src="img/serebro.png" alt=""></div>
                                 <div class="panel_block__name">Любитель</div>
-                                <div class="panel_block__text">Давно инетересюсь этой темой</div>
-                                <a class="panel_block__btn">Далее</a>
+                                <div class="panel_block__text">Давно интересуюсь этой темой</div>
+                                <a href="https://bcs.ru/investments" class="panel_block__btn">Далее</a>
                         </div>
                         <div class="panel__block panel_block3" @mouseover="selectCourse(2)">
                                 <div class="panel_block__img"><img src="img/gold.png" alt=""></div>
                                 <div class="panel_block__name">Профессионал</div>
                                 <div class="panel_block__text">Уже инвестирую</div>
-                                <a class="panel_block__btn">Далее</a>
+                                <a href="https://bcs.ru/professionals" class="panel_block__btn">Далее</a>
                         </div>
                     </div>
 
@@ -55,9 +55,9 @@ Vue.component('staps', {
     data: function() {
         return {
             courses: ['Вам может пригодиться раздел «Научиться»',' ' +
-            'Вам может пригодиться раздел «2»','Вам может пригодиться раздел «3»'],
-            selectedCourses: [false, false, false],
-            selectedCourse: -1,
+            'Вам может пригодиться раздел «Инвестиции»','Вам может пригодиться раздел «Для профессионалов»'],
+            selectedCourses: [true, false, false],
+            selectedCourse: 0,
         }
     },
     methods: {
