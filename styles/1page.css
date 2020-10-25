@@ -180,3 +180,11 @@
   -o-transition-delay: 0.05s;
   transition-delay: 0.05s;
   color: #000; }
+
+.page3__btn {
+  background-color: #fff103;
+  color: #000;
+  padding-left: 20%;
+  font-size: larger;
+  padding-right: 20%;
+}
