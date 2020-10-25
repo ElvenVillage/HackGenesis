@@ -3,7 +3,7 @@ const isMobile = window.screen.availWidth <= 425
 Vue.component('step-2', {
     template: `
     <div class="staps" style="font-family: 'arial_bold', Arial, sans-serif">
-        <div class="container">
+        <div class="container" >
             <div class="page-header">
             </div>
             <div style="display: flex; flex-direction: row"><div style="flex-grow: 1; flex-direction: column">
@@ -14,7 +14,7 @@ Vue.component('step-2', {
             </li>
         </ul>
         
-        </div><div style="flex-grow: 3">
+        </div><div style="flex-grow: 3; padding-top: 30px">
         <div style="font-weight: bold; font-size: large; margin: 5px">Шаг 2. Получите бесплатные рекомендации</div>
         <div style="flex-direction: column">
         <table v-for="(pr, idx) in investProducts[MASTERKEY]" :key="idx"
