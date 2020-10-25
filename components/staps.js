@@ -7,7 +7,18 @@ Vue.component('staps', {
             <div style="display: flex; flex-direction: row"><div style="flex-grow: 1">
         <ul class="timeline">
             <li class="timeline-inverted">
+                <div class="man"><img src="../img/step_1.svg" alt=""></div>
               <div class="timeline-badge warning">1<i class="glyphicon glyphicon-credit-card"></i></div>
+              <div class="timeline-badge warning clsasd1 claseda"><i class="glyphicon glyphicon-credit-card"></i></div>
+              <div class="timeline-badge warning clsasd2 claseda"><i class="glyphicon glyphicon-credit-card"></i></div>
+              <div class="timeline-badge warning clsasd3 claseda"><i class="glyphicon glyphicon-credit-card"></i></div>
+              <div class="timeline-badge warning clsasd4 claseda"><i class="glyphicon glyphicon-credit-card"></i></div>
+              <div class="timeline-badge warning clsasd5 claseda"><i class="glyphicon glyphicon-credit-card"></i></div>
+              <div class="timeline-badge warning clsasd6 claseda"><i class="glyphicon glyphicon-credit-card"></i></div>
+ 
+              <div class="timeline-badge warning clsasd7 claseda"><i class="glyphicon glyphicon-credit-card"></i></div>
+ 
+              <div class="timeline-badge warning clsasd8 claseda"><i class="glyphicon glyphicon-credit-card"></i></div>
 
               <div class="timeline-panel" style="height: 100vh">
                     <div class="panel__text">Шаг 1. Укажите ваш опыт в инвестировании</div>
