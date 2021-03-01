@@ -24,19 +24,19 @@ Vue.component('staps', {
                     <div class="panel__text">Шаг 1. Укажите ваш опыт в инвестировании</div>
                     <div class="panel__blocks">
                         <div class="panel__block panel_block1">
-                                <div class="panel_block__img"><img src="img/platin.png" alt=""></div>
+                                <div class="panel_block__img"><img src="../img/platin.png" alt=""></div>
                                 <div class="panel_block__name">Новичек</div>
                                 <div class="panel_block__text">Впервые интересуюсь</div>
                                 <a class="panel_block__btn">Далее</a>
                         </div>
                         <div class="panel__block panel_block2">
-                                <div class="panel_block__img"><img src="img/serebro.png" alt=""></div>
+                                <div class="panel_block__img"><img src="../img/serebro.png" alt=""></div>
                                 <div class="panel_block__name">Любитель</div>
                                 <div class="panel_block__text">Давно инетересюсь этой темой</div>
                                 <a class="panel_block__btn">Далее</a>
                         </div>
                         <div class="panel__block panel_block3">
-                                <div class="panel_block__img"><img src="img/gold.png" alt=""></div>
+                                <div class="panel_block__img"><img src="../img/gold.png" alt=""></div>
                                 <div class="panel_block__name">Профессионал</div>
                                 <div class="panel_block__text">Уже инвестирую</div>
                                 <a class="panel_block__btn">Далее</a>
