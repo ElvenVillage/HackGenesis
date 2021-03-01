@@ -182,9 +182,12 @@
   color: #000; }
 
 .page3__btn {
-  background-color: #fff103;
   color: #000;
   padding-left: 20%;
+  position: absolute;
+  bottom: -20px;
   font-size: larger;
-  padding-right: 20%;
+  vertical-align: central;
+  text-align: center;
+  line-height: 100px;
 }

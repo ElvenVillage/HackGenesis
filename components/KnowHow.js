@@ -16,7 +16,7 @@ Vue.component('know-how', {
               </div>
             </div>
     <div style="font-family: 'arial_bold', Arial, sans-serif; font-size: xx-large;
-                position: absolute; left: 100px; top: 70px">Полезно знать</div>
+                position: absolute; left: 100px; top: 70px; background-color: #fff103; border-radius: 20px; padding: 10px">Полезно знать</div>
     <div style="display: grid; grid-template-columns: 1fr 2fr">
         <div></div>
         <img v-if="!isOnMobile" src="img/data_analytics.svg" style="position: absolute; bottom: 60px; width: 500px; height: 550px; left: 110px;">
@@ -57,7 +57,7 @@ Vue.component('know-how', {
     <div style="display: grid; grid-template-columns: 1fr 1fr 1fr">
     <div></div><div>
     
-    <div style="background-color: #fff103; border-radius: 20px; position: absolute; bottom: 100px; width: 300px; height: 60px;margin-left: 100px"><a href="index.html" class="page3__btn">Что же выбрать?</a></div>
+    <div style="background-color: #fed243;border-radius: 20px; position: absolute; bottom: 150px; width: 300px; height: 60px;margin-left: 100px"><a href="#" class="page3__btn">Что же выбрать?</a></div>
     </div><div></div>
 </div>
 </div>`,

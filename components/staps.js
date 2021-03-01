@@ -22,24 +22,26 @@ Vue.component('staps', {
 
               <div class="timeline-panel" style="height: 100vh">
                     <div class="panel__text">Шаг 1. Укажите ваш опыт в инвестировании</div>
+                    <div style="padding-left: 50px; font-size: large"><a :href="courses[selectedCourse].link">
+                     {{ courses[selectedCourse].text }}</a></div>
                     <div class="panel__blocks">
-                        <div class="panel__block panel_block1">
-                                <div class="panel_block__img"><img src="../img/platin.png" alt=""></div>
-                                <div class="panel_block__name">Новичек</div>
+                        <div class="panel__block panel_block1" @mouseover="selectCourse(0)">
+                                <div class="panel_block__img"><img src="img/platin.png" alt=""></div>
+                                <div class="panel_block__name">Новичок</div>
                                 <div class="panel_block__text">Впервые интересуюсь</div>
-                                <a class="panel_block__btn">Далее</a>
+                                <a href="#step2" class="panel_block__btn">Далее</a>
                         </div>
-                        <div class="panel__block panel_block2">
-                                <div class="panel_block__img"><img src="../img/serebro.png" alt=""></div>
+                        <div class="panel__block panel_block2" @mouseover="selectCourse(1)">
+                                <div class="panel_block__img"><img src="img/serebro.png" alt=""></div>
                                 <div class="panel_block__name">Любитель</div>
-                                <div class="panel_block__text">Давно инетересюсь этой темой</div>
-                                <a class="panel_block__btn">Далее</a>
+                                <div class="panel_block__text">Давно интересуюсь этой темой</div>
+                                <a href="#step2" class="panel_block__btn">Далее</a>
                         </div>
-                        <div class="panel__block panel_block3">
-                                <div class="panel_block__img"><img src="../img/gold.png" alt=""></div>
+                        <div class="panel__block panel_block3" @mouseover="selectCourse(2)">
+                                <div class="panel_block__img"><img src="img/gold.png" alt=""></div>
                                 <div class="panel_block__name">Профессионал</div>
                                 <div class="panel_block__text">Уже инвестирую</div>
-                                <a class="panel_block__btn">Далее</a>
+                                <a href="#step2" class="panel_block__btn">Далее</a>
                         </div>
                     </div>
 
@@ -50,5 +52,23 @@ Vue.component('staps', {
         </div>
     </div>
     </div>
-    		`
+    		`,
+    data: function() {
+        return {
+            courses: [{ text: 'Вам может пригодиться раздел «Научиться»', link: 'https://bcs.ru/studing' },
+                { text: 'Вам может пригодиться раздел «Инвестиции»', link: 'https://bcs.ru/investments' },
+                { text: 'Вам может пригодиться раздел «Для профессионалов»', link: 'https://bcs.ru/professionals' }
+            ],
+            selectedCourses: [true, false, false],
+            selectedCourse: 0,
+        }
+    },
+    methods: {
+        selectCourse(idx) {
+            const nCourses = [false, false, false]
+            nCourses[idx] = true
+            this.selectedCourse = idx
+            this.selectedCourses = nCourses
+        }
+    }
 })
